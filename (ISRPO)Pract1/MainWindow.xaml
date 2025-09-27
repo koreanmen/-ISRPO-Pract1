@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_ISRPO_Pract1"
         mc:Ignorable="d"
-        Title="Сумма столбцов с нулями" Height="500" Width="700">
+        Title="Сумма столбцов с нулями" Height="500" Width="800">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

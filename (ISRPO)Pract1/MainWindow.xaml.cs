@@ -50,33 +50,20 @@ namespace _ISRPO_Pract1
 
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            if (matrix == null)
+            try 
             {
-                MessageBox.Show("Сначала создайте матрицу.");
-                return;
-            }
-
-            double totalSum = 0;
-
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                bool hasZero = false;
-                double columnSum = 0;
-
-                for (int i = 0; i < matrix.GetLength(0); i++)
+                if (matrix == null)
                 {
-                    columnSum += matrix[i, j];
-                    if (matrix[i, j] == 0)
-                        hasZero = true;
+                    MessageBox.Show("Сначала создайте матрицу.");
+                    return;
                 }
 
-                if (hasZero)
-                {
-                    totalSum += columnSum;
-                }
-            }
+                double totalSum = 0;
+                Calcul.Calc(matrix, out totalSum);
 
-            TbResult.Text = $"Общая сумма элементов столбцов, содержащих хотя бы один ноль: {totalSum}";
+                TbResult.Text = $"Общая сумма элементов столбцов, содержащих хотя бы один ноль: {totalSum}";
+            }
+            catch { }
         }
     }
 }
