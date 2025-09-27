@@ -13,7 +13,7 @@ namespace _ISRPO_Pract1
 {
     public partial class MainWindow : Window
     {
-        private double[,] matrix;
+        double[,] matrix;
 
         public MainWindow()
         {
